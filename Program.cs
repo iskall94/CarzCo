@@ -1,5 +1,7 @@
 ﻿using CarzCo.Vehicles;
 using CarzCo.Vehicles.Cars;
+using CarzCo.Vehicles.Bus;
+using CarzCo.Vehicles.Boats;
 using CarzCo.Vehicles.Motorcycles;
 using CarzCo.Vehicles.Trucks;
 using CarzCo.Enums;
@@ -19,6 +21,9 @@ namespace CarzCo
             Vehicle.BuyVehicle(vehicles, new Car("Toyota", "COMS", 15, 2, FuelType.Petrol, 3));
             Vehicle.BuyVehicle(vehicles, new Motorcycle("Harley-Davidson", "Street 750", 200, 2, FuelType.Petrol, 2, "Brown", false));
             Vehicle.BuyVehicle(vehicles, new Truck("Scania", "R500", 100, 3, FuelType.Diesel, 5000));
+            Vehicle.BuyVehicle(vehicles, new Bus("MAN", "Not Airbus", 100, 80, FuelType.Electric, 3, true, 4, BusType.Blue));
+            Vehicle.BuyVehicle(vehicles, new Boat("Targa", "Type 42", 50, 10, FuelType.Diesel, "Molly", BoatType.Motorboat, MotorboatEngineType.Inboard));
+            Vehicle.BuyVehicle(vehicles, new Boat("Örnvik", "Type 500", 70, 4, FuelType.Petrol, "Molly", BoatType.Motorboat, MotorboatEngineType.Outboard));
 
             var vehicleToSell = vehicles.Find(v => v.Brand == "Volvo");
             if (vehicleToSell != null)
